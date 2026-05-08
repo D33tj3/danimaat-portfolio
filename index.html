@@ -1,80 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dani Maat — Art Direction</title>
 
-    <title>Dani Maat</title>
-
-    <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="background-glow"></div>
+<!-- CURSOR LIGHT -->
+<div class="cursor"></div>
 
-    <!-- NAV -->
+<!-- AMBIENT -->
+<div class="glow pink"></div>
+<div class="glow blue"></div>
 
-    <nav class="navbar">
+<!-- NAV -->
 
-        <div class="nav-container">
+<nav class="nav">
+    <div class="nav-inner">
+        <div class="logo">DANI MAAT</div>
+        <div class="links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#cases">Cases</a>
+        </div>
+    </div>
+</nav>
 
-            <a href="#" class="logo">
-                DANI MAAT
-            </a>
+<!-- HERO -->
 
-            <div class="nav-links">
-                <a href="#" class="nav-link">Projects</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Contact</a>
-            </div>
+<section class="hero">
 
+    <div class="hero-inner">
+
+        <p class="kicker">ART DIRECTION · CONCEPT DEVELOPMENT</p>
+
+        <h1>
+            vol met creatieve ideeën en de visie om het waar te maken
+        </h1>
+
+        <p class="sub">
+            Hi! Ik ben Daniëlle Maat — art / creative director met focus op concept ontwikkeling en visuele storytelling.
+        </p>
+
+        <a class="button" href="#work">Explore work</a>
+
+    </div>
+
+</section>
+
+<!-- MARQUEE -->
+
+<div class="marquee">
+    <div class="track">
+        <span>ART DIRECTION ✦ CONCEPT ✦ WORLD BUILDING ✦ VISUAL STORYTELLING ✦</span>
+        <span>ART DIRECTION ✦ CONCEPT ✦ WORLD BUILDING ✦ VISUAL STORYTELLING ✦</span>
+    </div>
+</div>
+
+<!-- WORK (MONKS TAKEOVER SYSTEM) -->
+
+<section class="work" id="work">
+
+    <div class="work-list">
+
+        <div class="work-item active"
+            data-img="https://images.unsplash.com/photo-1520975916090-3105956dac38"
+            data-color="#ffffff">
+
+            Duckside of the Moon
         </div>
 
-    </nav>
+        <div class="work-item"
+            data-img="https://images.unsplash.com/photo-1526481280695-3c687fd5432c"
+            data-color="#f5f7ff">
 
-    <!-- HERO -->
-
-    <section class="hero">
-
-        <div class="hero-container reveal">
-
-            <p class="hero-tag">
-                CONCEPT DEVELOPMENT / ART DIRECTION
-            </p>
-
-            <h1 class="hero-title">
-                Building <span>worlds</span><br>
-                through visual storytelling.
-            </h1>
-
-            <p class="hero-description">
-                I’m Daniëlle Maat — a multidisciplinary creative focused on
-                concept development, art direction and stylized visual identities.
-                I love crafting worlds that feel cinematic, playful and emotionally memorable.
-            </p>
-
-            <a href="#" class="button">
-                VIEW PROJECTS
-            </a>
-
+            Concept Worldbuilding
         </div>
 
-        <div class="floating-shape"></div>
+        <div class="work-item"
+            data-img="https://images.unsplash.com/photo-1526318472351-c75fcf070305"
+            data-color="#eef2ff">
 
-    </section>
-
-    <!-- SCROLL SECTION -->
-
-    <section class="scroll-section">
-
-        <div class="scroll-text reveal">
-            Creative direction with a focus on narrative, atmosphere and identity.
+            Visual Identity Study
         </div>
 
-    </section>
+    </div>
+
+    <div class="work-stage">
+        <img class="active" src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+        <img src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c">
+        <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305">
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="about-inner">
+
+        <h2>About</h2>
+
+        <p>
+            Ik werk op het snijvlak van art direction en narratief ontwerp.
+            Elk project begint bij sfeer, niet bij stijl.
+        </p>
+
+        <p>
+            Mijn achtergrond in game art en storytelling beïnvloedt hoe ik visuele werelden bouw.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CASES (STRUCTUREL FUTURE PROOF) -->
+
+<section class="cases" id="cases">
+
+    <div class="case">
+
+        <div class="case-title">Duckside of the Moon</div>
+        <div class="case-meta">Art Direction / Worldbuilding</div>
+
+    </div>
+
+    <div class="case">
+
+        <div class="case-title">Concept Worlds</div>
+        <div class="case-meta">Visual Identity</div>
+
+    </div>
+
+    <div class="case">
+
+        <div class="case-title">Narrative Systems</div>
+        <div class="case-meta">Game Art Direction</div>
+
+    </div>
+
+</section>
+
+<!-- JS -->
+
+<script>
+const items = document.querySelectorAll('.work-item');
+const images = document.querySelectorAll('.work-stage img');
+const work = document.querySelector('.work');
+const cursor = document.querySelector('.cursor');
+
+let current = 0;
+
+/* hover system (Monks takeover feel) */
+
+items.forEach((item, index) => {
+
+    item.addEventListener('mouseenter', () => {
+
+        items.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
+
+        work.style.background = item.dataset.color;
+
+        current = index;
+
+    });
+
+});
+
+/* scroll-driven subtle motion */
+
+window.addEventListener('scroll', () => {
+
+    const y = window.scrollY;
+
+    document.querySelector('.glow.pink').style.transform =
+        `translateY(${y * 0.05}px)`;
+
+    document.querySelector('.glow.blue').style.transform =
+        `translateY(${-y * 0.03}px)`;
+
+});
+
+/* cursor light system */
+
+document.addEventListener('mousemove', (e) => {
+
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+
+});
+
+</script>
 
 </body>
 </html>
