@@ -1,0 +1,239 @@
+```html
+<!-- projects.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projects — Dani Maat</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<!-- PAGE GLOWS -->
+
+<div class="glow pink"></div>
+<div class="glow blue"></div>
+
+<!-- CURSOR -->
+
+<div class="cursor"></div>
+
+<!-- NAV -->
+
+<nav class="nav">
+
+    <div class="nav-inner">
+
+        <a href="index.html" class="logo">
+            DANI MAAT
+        </a>
+
+        <div class="links">
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="projects.html" class="active-link">
+                Projects
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="projects-hero">
+
+    <div class="projects-hero-inner">
+
+        <p class="kicker">
+            SELECTED WORK
+        </p>
+
+        <h1>
+            Concepts,<br>
+            direction & visual storytelling.
+        </h1>
+
+        <p class="projects-sub">
+            A selection of projects focused on atmosphere,
+            identity and narrative-driven visuals.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PROJECT GRID -->
+
+<section class="projects-grid">
+
+    <!-- PROJECT -->
+
+    <a href="#" class="project-card">
+
+        <div class="project-image">
+
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600&auto=format&fit=crop" alt="">
+
+        </div>
+
+        <div class="project-overlay">
+
+            <p class="project-type">
+                ART DIRECTION
+            </p>
+
+            <h2>
+                Duckside of the Moon
+            </h2>
+
+            <p class="project-description">
+                Narrative-driven visual development
+                for a stylized indie game concept.
+            </p>
+
+        </div>
+
+    </a>
+
+    <!-- PROJECT -->
+
+    <a href="#" class="project-card">
+
+        <div class="project-image">
+
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" alt="">
+
+        </div>
+
+        <div class="project-overlay">
+
+            <p class="project-type">
+                CONCEPT DEVELOPMENT
+            </p>
+
+            <h2>
+                Visual Identity Study
+            </h2>
+
+            <p class="project-description">
+                Experimental concept work focused
+                on branding, typography and mood.
+            </p>
+
+        </div>
+
+    </a>
+
+    <!-- PROJECT -->
+
+    <a href="#" class="project-card">
+
+        <div class="project-image">
+
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop" alt="">
+
+        </div>
+
+        <div class="project-overlay">
+
+            <p class="project-type">
+                CREATIVE DIRECTION
+            </p>
+
+            <h2>
+                Atmosphere Systems
+            </h2>
+
+            <p class="project-description">
+                Worldbuilding explorations focused
+                on cinematic storytelling and tone.
+            </p>
+
+        </div>
+
+    </a>
+
+    <!-- PROJECT -->
+
+    <a href="#" class="project-card">
+
+        <div class="project-image">
+
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop" alt="">
+
+        </div>
+
+        <div class="project-overlay">
+
+            <p class="project-type">
+                STORYTELLING
+            </p>
+
+            <h2>
+                Narrative Worlds
+            </h2>
+
+            <p class="project-description">
+                Story-first visual exploration
+                combining concept art and direction.
+            </p>
+
+        </div>
+
+    </a>
+
+</section>
+
+<!-- MARQUEE -->
+
+<section class="marquee">
+
+    <div class="track">
+
+        <span>
+            ART DIRECTION ✦ CONCEPT DEVELOPMENT ✦ CREATIVE DIRECTION ✦ VISUAL STORYTELLING ✦
+        </span>
+
+        <span>
+            ART DIRECTION ✦ CONCEPT DEVELOPMENT ✦ CREATIVE DIRECTION ✦ VISUAL STORYTELLING ✦
+        </span>
+
+    </div>
+
+</section>
+
+<script>
+
+// cursor
+
+const cursor = document.querySelector('.cursor');
+
+window.addEventListener('mousemove', (e) => {
+
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+
+});
+
+</script>
+
+</body>
+</html>
+```
